@@ -9,6 +9,16 @@ import { Button } from './../../components/Button/index';
 
 
 export const Home = () => {
+  const navigate = useNavigate();
+  const { user, loginWithGoogle } = useAuth();
+
+  const handleCreateRoom = async () => {
+    if (!user) {
+      await loginWithGoogle();
+    }
+
+    navigate('/rooms/new');
+  }
 
   return (
     <Container>
