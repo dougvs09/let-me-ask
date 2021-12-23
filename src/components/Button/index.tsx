@@ -1,9 +1,9 @@
-import { ButtonHTMLAttributes } from "react"
+import { ButtonHTMLAttributes } from 'react';
 
-import { ButtonComponent } from './styles'
+import { ButtonComponent } from './styles';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button = (props : ButtonProps) => {
-  return <ButtonComponent {...props}></ButtonComponent>
-}
+export const Button = (props: ButtonProps) => {
+  return <ButtonComponent {...props}></ButtonComponent>;
+};
