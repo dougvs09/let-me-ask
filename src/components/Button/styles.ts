@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ButtonComponent = styled.button`
   width: 100%;
@@ -12,8 +12,8 @@ export const ButtonComponent = styled.button`
   border-radius: 8px;
 
   font: medium 16px 'Roboto', sans-serif;
-  background: #835AFD;
-  color: #FEFEFE;
+  background: #835afd;
+  color: #fefefe;
   cursor: pointer;
 
   transition: filter 0.2s;
@@ -26,4 +26,4 @@ export const ButtonComponent = styled.button`
     opacity: 0.6;
     cursor: not-allowed;
   }
-`
+`;
