@@ -16,14 +16,12 @@ export const RoomCode = ({ code }: RoomCodeProps) => {
   };
 
   return (
-    <>
-      <Code>
-        <button onClick={copyRoomCodeFromClipboard}>
-          <img src={copyIcon} alt="Copy Icon" />
-        </button>
-        Sala {code}
-      </Code>
+    <Code>
+      <button onClick={copyRoomCodeFromClipboard}>
+        <img src={copyIcon} alt="Copy Icon" />
+      </button>
+      Sala {code}
       <Toaster />
-    </>
+    </Code>
   );
 };

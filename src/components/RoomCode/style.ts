@@ -10,7 +10,7 @@ export const Code = styled.span`
 
   font: 500 14px 'Roboto', sans-serif;
 
-  button {
+  > button {
     border: none;
     padding: 11px;
     border-radius: 8px 0 0 8px;
