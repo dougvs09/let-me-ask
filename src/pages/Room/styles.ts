@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Header = styled.header`
   width: 100%;
   padding: 25px 0;
+  border-bottom: 2px solid #e2e2e2;
 `;
 
 export const HeaderContainer = styled.div`
@@ -128,57 +129,25 @@ export const QuestionsList = styled.ul`
   margin: 30px 0;
 
   overflow: auto;
-
-  li {
-    width: 100%;
-    padding: 25px;
-
-    background: #fff;
-
-    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
-
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 25px;
-    }
-
-    > p {
-      font: 16px/24px 'Roboto', sans-serif;
-      color: #111;
-    }
-  }
 `;
 
-export const QuestionUserInfo = styled.span`
+export const LikeButton = styled.button`
   display: flex;
-  align-items: center;
-  gap: 10px;
-
-  font: 14px 'Roboto', sans-serif;
-  color: #737380;
-
-  > img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-  }
-`;
-
-export const LikeInfo = styled.span`
-  display: flex;
-  align-items: center;
   gap: 5px;
+  align-items: flex-end;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
 
-  p {
-    font: 16px 'Poppins', sans-serif;
+  span {
     color: #737380;
   }
 
-  img {
-    width: 24px;
-    height: 24px;
-    fill: #835afd;
+  &.liked {
+    color: #845afd;
+
+    svg path {
+      stroke: #845afd;
+    }
   }
 `;
