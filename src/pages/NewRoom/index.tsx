@@ -16,7 +16,7 @@ export const NewRoom = () => {
   const [newRoom, setNewRoom] = useState('');
   const navigate = useNavigate();
 
-  const handleCreatRoom = async (event: FormEvent) => {
+  const handleCreateRoom = async (event: FormEvent) => {
     event.preventDefault();
 
     if (newRoom.trim() === '') {
@@ -43,7 +43,7 @@ export const NewRoom = () => {
       <Main>
         <img src={logoLetMeAsk} alt="Logo Let Me Ask" />
         <h2>Crie uma nova sala</h2>
-        <form onSubmit={handleCreatRoom}>
+        <form onSubmit={handleCreateRoom}>
           <input
             type="text"
             placeholder="Nome da sala"
