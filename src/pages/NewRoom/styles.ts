@@ -1,9 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1.3fr;
-`
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
 export const Aside = styled.aside`
   height: 100vh;
@@ -11,7 +15,7 @@ export const Aside = styled.aside`
   flex-direction: column;
   justify-content: center;
 
-  background: #835AFD;
+  background: #835afd;
 
   img {
     max-width: 320px;
@@ -24,7 +28,7 @@ export const Aside = styled.aside`
 
     font: 700 36px 'Poppins', sans-serif;
     line-height: 42px;
-    color: #FFF;
+    color: #fff;
   }
 
   p {
@@ -32,9 +36,47 @@ export const Aside = styled.aside`
 
     font: 400 24px 'Roboto', sans-serif;
     line-height: 32px;
-    color: #F8F8F8;
+    color: #f8f8f8;
   }
-`
+
+  @media (max-width: 900px) {
+    img {
+      max-width: 200px;
+      margin-left: 50px;
+    }
+
+    h1 {
+      font-size: 24px;
+      padding-left: 50px;
+    }
+
+    p {
+      font-size: 16px;
+      padding-left: 50px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    height: auto;
+    padding: 40px 0;
+
+    img {
+      max-width: 250px;
+      margin-left: 50px;
+    }
+
+    h1 {
+      font-size: 28px;
+      padding-left: 50px;
+    }
+
+    p {
+      font-size: 16px;
+      padding-left: 50px;
+    }
+  }
+`;
+
 export const Main = styled.main`
   max-width: 380px;
   width: 100%;
@@ -62,14 +104,14 @@ export const Main = styled.main`
       width: 100%;
       padding: 15px 16px;
       border-radius: 8px;
-      border: 2px solid #A8A8B3;
+      border: 2px solid #a8a8b3;
 
       font: 16px 'Roboto', sans-serif;
-      color: #A8A8B3;
+      color: #a8a8b3;
 
       &::placeholder {
         font: 16px 'Roboto', sans-serif;
-        color: #A8A8B3;
+        color: #a8a8b3;
       }
     }
   }
@@ -80,7 +122,11 @@ export const Main = styled.main`
     margin-top: 16px;
 
     a {
-      color: #E559F9;
+      color: #e559f9;
     }
   }
-`
+
+  @media (max-width: 600px) {
+    padding: 40px 32px;
+  }
+`;

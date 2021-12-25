@@ -12,12 +12,26 @@ export const HeaderContainer = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 460px) {
+    flex-direction: column;
+
+    > span {
+      width: 260px;
+      align-self: center;
+    }
+  }
 `;
 
 export const Logo = styled.div`
   img {
     width: 100px;
     height: 45px;
+  }
+
+  @media (max-width: 460px) {
+    margin-bottom: 20px;
+    align-self: center;
   }
 `;
 
@@ -73,6 +87,14 @@ export const Title = styled.div`
 
     font: 500 14px 'Roboto', sans-serif;
     color: #fefefe;
+  }
+
+  @media (max-width: 460px) {
+    flex-direction: column;
+
+    span {
+      width: 115px;
+    }
   }
 `;
 

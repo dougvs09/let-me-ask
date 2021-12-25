@@ -13,6 +13,7 @@ import {
   Title,
   QuestionsList,
   AdminControlls,
+  RoomControlls,
 } from './styles';
 
 import { RoomCode } from '../../components/RoomCode/index';
@@ -67,10 +68,10 @@ export const AdminRoom = () => {
           <Logo>
             <img src={logoLetMeAsk} alt="Logo Let Me Ask" />
           </Logo>
-          <div>
+          <RoomControlls>
             <RoomCode code={roomId!} />
             <Button onClick={handleEndRoom}>Encerrar sala</Button>
-          </div>
+          </RoomControlls>
         </HeaderContainer>
       </Header>
       <Main>

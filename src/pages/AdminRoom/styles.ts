@@ -13,26 +13,38 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  div {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+`;
 
-    > button {
-      width: auto;
-      margin: 0;
-      background: #fcfcfc;
-      color: #835afd;
-      border: 2px solid #835afd;
-      border-radius: 10px;
-      padding: 11px 25px;
+export const RoomControlls = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
 
-      &:not(:disabled):hover {
-        color: #835efc;
-        border-color: #836cfd;
-        filter: brightness(1);
-      }
+  > button {
+    width: auto;
+    margin: 0;
+    background: #fcfcfc;
+    color: #835afd;
+    border: 2px solid #835afd;
+    border-radius: 10px;
+    padding: 11px 25px;
+
+    &:not(:disabled):hover {
+      color: #835efc;
+      border-color: #836cfd;
+      filter: brightness(1);
     }
+  }
+
+  @media (max-width: 600px) {
+    justify-content: space-between;
+  }
+
+  @media (max-width: 460px) {
+    flex-direction: column;
   }
 `;
 
@@ -40,6 +52,11 @@ export const Logo = styled.div`
   img {
     width: 100px;
     height: 45px;
+  }
+
+  @media (max-width: 600px) {
+    align-self: center;
+    margin-bottom: 20px;
   }
 `;
 
@@ -74,6 +91,14 @@ export const Title = styled.div`
 
     font: 500 14px 'Roboto', sans-serif;
     color: #fefefe;
+  }
+
+  @media (max-width: 460px) {
+    flex-direction: column;
+
+    span {
+      width: 115px;
+    }
   }
 `;
 
