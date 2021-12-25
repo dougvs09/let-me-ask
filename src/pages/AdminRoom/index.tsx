@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -14,16 +15,17 @@ import {
   QuestionsList,
   AdminControlls,
   RoomControlls,
+  ModalConfirm,
 } from './styles';
 
 import { RoomCode } from '../../components/RoomCode';
 import { Button } from '../../components/Button';
 import { Question } from '../../components/Question';
-import { Modal } from '../../components/Modal';
 
 import logoLetMeAsk from '../../assets/images/logo.svg';
 import emptyIcon from '../../assets/images/empty-questions.svg';
-import { useState } from 'react';
+import dangerImg from '../../assets/images/danger.svg';
+import { Modal } from '../../components/Modal';
 
 type ParamsProps = {
   id: string;
@@ -39,10 +41,8 @@ export const AdminRoom = () => {
   const { questions, title } = useRoom(roomId!);
 
   const handleDeleteQuestion = async (questionId: string) => {
-    if (window.confirm('Are you sure you want to delete this question?')) {
-      await database.ref(`/rooms/${roomId}/questions/${questionId}`).remove();
-      toast.success('Question deleted');
-    }
+    await database.ref(`/rooms/${roomId}/questions/${questionId}`).remove();
+    toast.success('Question deleted');
   };
 
   const openModal = () => {
@@ -199,8 +199,15 @@ export const AdminRoom = () => {
       <Toaster />
       {modal ? (
         <Modal>
-          <Button onClick={closeModal}>Cancelar</Button>
-          <Button onClick={handleEndRoom}>Sim, encerrar</Button>
+          <ModalConfirm>
+            <img src={dangerImg} alt="danger icon" />
+            <h2>Encerrar sala</h2>
+            <p>Tem certeza que deseja encerrar esta sala?</p>
+            <div>
+              <Button onClick={closeModal}>Cancelar</Button>
+              <Button onClick={handleEndRoom}>Sim, encerrar</Button>
+            </div>
+          </ModalConfirm>
         </Modal>
       ) : (
         ''

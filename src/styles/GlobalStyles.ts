@@ -11,11 +11,8 @@ export const GlobalStyles = createGlobalStyle`
   html, body, #root {
     width: 100%;
     height: 100vh;
-  }
-
-  body {
     background: #F8F8F8;
-    color: #29292e;
+    color: #29292E;
   }
 
   body, input, button, textarea {
