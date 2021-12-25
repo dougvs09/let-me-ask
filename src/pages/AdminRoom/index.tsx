@@ -16,12 +16,14 @@ import {
   RoomControlls,
 } from './styles';
 
-import { RoomCode } from '../../components/RoomCode/index';
-import { Button } from '../../components/Button/index';
+import { RoomCode } from '../../components/RoomCode';
+import { Button } from '../../components/Button';
 import { Question } from '../../components/Question';
+import { Modal } from '../../components/Modal';
 
 import logoLetMeAsk from '../../assets/images/logo.svg';
 import emptyIcon from '../../assets/images/empty-questions.svg';
+import { useState } from 'react';
 
 type ParamsProps = {
   id: string;
@@ -32,6 +34,8 @@ export const AdminRoom = () => {
   const roomId = params.id;
   const navigate = useNavigate();
 
+  const [modal, setModal] = useState(false);
+
   const { questions, title } = useRoom(roomId!);
 
   const handleDeleteQuestion = async (questionId: string) => {
@@ -39,6 +43,14 @@ export const AdminRoom = () => {
       await database.ref(`/rooms/${roomId}/questions/${questionId}`).remove();
       toast.success('Question deleted');
     }
+  };
+
+  const openModal = () => {
+    setModal(true);
+  };
+
+  const closeModal = () => {
+    setModal(false);
   };
 
   const handleEndRoom = async () => {
@@ -70,13 +82,13 @@ export const AdminRoom = () => {
           </Logo>
           <RoomControlls>
             <RoomCode code={roomId!} />
-            <Button onClick={handleEndRoom}>Encerrar sala</Button>
+            <Button onClick={openModal}>Encerrar sala</Button>
           </RoomControlls>
         </HeaderContainer>
       </Header>
       <Main>
         <Title>
-          <h2>{title}</h2>
+          <h2>Sala {title}</h2>
           {questions.length > 0 && <span>{questions.length} perguntas</span>}
         </Title>
         {questions.length > 0 ? (
@@ -185,6 +197,14 @@ export const AdminRoom = () => {
         )}
       </Main>
       <Toaster />
+      {modal ? (
+        <Modal>
+          <Button onClick={closeModal}>Cancelar</Button>
+          <Button onClick={handleEndRoom}>Sim, encerrar</Button>
+        </Modal>
+      ) : (
+        ''
+      )}
     </>
   );
 };
