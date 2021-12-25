@@ -45,6 +45,12 @@ export const Home = () => {
       return;
     }
 
+    // if (roomRef.val().authorId === user?.id) {
+    //   navigate(`/admin/rooms/${roomCode}`);
+    // } else {
+    //   navigate(`/rooms/${roomCode}`);
+    // }
+
     navigate(`/rooms/${roomCode}`);
   };
 

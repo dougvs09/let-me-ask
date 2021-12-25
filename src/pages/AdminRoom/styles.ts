@@ -96,5 +96,45 @@ export const AdminControlls = styled.div`
     background: transparent;
     border: 0;
     cursor: pointer;
+
+    &.isAnswered {
+      svg path {
+        stroke: #835afd;
+      }
+
+      &:hover {
+        svg path {
+          stroke: #835afd;
+        }
+      }
+    }
+
+    &.isHighlighted {
+      svg circle {
+        stroke: #835afd;
+      }
+
+      svg path {
+        stroke: #835afd;
+      }
+
+      &:hover {
+        svg circle {
+          stroke: #835afd;
+        }
+
+        svg path {
+          stroke: #835afd;
+        }
+      }
+    }
+
+    &.delete {
+      &:hover {
+        svg path {
+          stroke: #e73f5d;
+        }
+      }
+    }
   }
 `;

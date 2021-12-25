@@ -8,14 +8,22 @@ type QuestionProps = {
     avatar: string;
   };
   children: ReactNode;
+  isHighlighted?: boolean;
+  isAnswered?: boolean;
 };
 
-export const Question = ({ content, author, children }: QuestionProps) => {
+export const Question = ({
+  content,
+  author,
+  children,
+  isAnswered = false,
+  isHighlighted = false,
+}: QuestionProps) => {
   return (
-    <QuestionItem>
+    <QuestionItem isAnswered={isAnswered} isHighlighted={isHighlighted}>
       <p>{content}</p>
       <div>
-        <QuestionUserInfo>
+        <QuestionUserInfo isHighlighted={isHighlighted} isAnswered={isAnswered}>
           <img src={author.avatar} alt="user icon" />
           <p>{author.name}</p>
         </QuestionUserInfo>

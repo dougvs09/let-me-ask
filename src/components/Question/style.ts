@@ -1,16 +1,30 @@
 import styled from 'styled-components';
 
-export const QuestionItem = styled.li`
+interface Props {
+  isAnswered: boolean;
+  isHighlighted: boolean;
+}
+
+export const QuestionItem = styled.li<Props>`
   width: 100%;
   padding: 25px;
 
-  background: #fff;
+  background: ${(props) =>
+    props.isHighlighted && !props.isAnswered
+      ? '#F4F0FF'
+      : props.isAnswered
+      ? '#DBDCDD'
+      : '#FFF'};
 
   box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
 
+  border-radius: 10px;
+  border: ${(props) =>
+    props.isHighlighted && !props.isAnswered ? '2px solid #835AFD' : ''};
+
   div {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     margin-top: 25px;
   }
@@ -21,13 +35,14 @@ export const QuestionItem = styled.li`
   }
 `;
 
-export const QuestionUserInfo = styled.span`
+export const QuestionUserInfo = styled.span<Props>`
   display: flex;
   align-items: center;
   gap: 10px;
 
   font: 14px 'Roboto', sans-serif;
-  color: #737380;
+  color: ${(props) =>
+    props.isHighlighted && !props.isAnswered ? '#29292E' : '#737380'};
 
   > img {
     width: 32px;
