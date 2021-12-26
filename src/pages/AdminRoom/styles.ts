@@ -18,6 +18,18 @@ export const HeaderContainer = styled.div`
   }
 `;
 
+export const Logo = styled.div`
+  img {
+    width: 100px;
+    height: 45px;
+  }
+
+  @media (max-width: 600px) {
+    align-self: center;
+    margin-bottom: 20px;
+  }
+`;
+
 export const RoomControlls = styled.div`
   display: flex;
   gap: 10px;
@@ -45,18 +57,6 @@ export const RoomControlls = styled.div`
 
   @media (max-width: 460px) {
     flex-direction: column;
-  }
-`;
-
-export const Logo = styled.div`
-  img {
-    width: 100px;
-    height: 45px;
-  }
-
-  @media (max-width: 600px) {
-    align-self: center;
-    margin-bottom: 20px;
   }
 `;
 
@@ -164,6 +164,45 @@ export const AdminControlls = styled.div`
           stroke: #835afd;
         }
       }
+    }
+  }
+`;
+
+export const ModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > button {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+  }
+
+  form {
+    margin-top: 25px;
+
+    textarea {
+      border: none;
+      resize: none;
+      width: 400px;
+      height: 150px;
+      padding: 15px 15px;
+      box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
+
+      background: #fff;
+    }
+
+    > button {
+      width: auto;
+      margin-top: 20px;
     }
   }
 `;

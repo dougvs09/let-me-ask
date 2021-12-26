@@ -43,27 +43,6 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
 
-  form {
-    margin-top: 25px;
-
-    textarea {
-      border: none;
-      resize: none;
-      width: 100%;
-      height: 120px;
-      padding: 15px 15px;
-      box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
-
-      background: #fff;
-
-      &::placeholder {
-        font: 16px 'Roboto', sans-serif;
-        line-height: 24px;
-        color: #737380;
-      }
-    }
-  }
-
   > img {
     width: 284px;
     height: 243px;
@@ -94,6 +73,27 @@ export const Title = styled.div`
 
     span {
       width: 115px;
+    }
+  }
+`;
+
+export const Form = styled.form`
+  margin-top: 25px;
+
+  textarea {
+    border: none;
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 15px 15px;
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
+
+    background: #fff;
+
+    &::placeholder {
+      font: 16px 'Roboto', sans-serif;
+      line-height: 24px;
+      color: #737380;
     }
   }
 `;

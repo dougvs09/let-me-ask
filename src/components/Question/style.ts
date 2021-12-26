@@ -22,13 +22,6 @@ export const QuestionItem = styled.li<Props>`
   border: ${(props) =>
     props.isHighlighted && !props.isAnswered ? '2px solid #835AFD' : ''};
 
-  > div {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-top: 25px;
-  }
-
   > p {
     font: 16px/24px 'Roboto', sans-serif;
     color: #111;
@@ -65,5 +58,33 @@ export const LikeInfo = styled.span`
     width: 24px;
     height: 24px;
     fill: #835afd;
+  }
+`;
+
+export const InfoContainer = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 25px;
+`;
+
+export const Response = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 10px;
+  padding: 10px;
+
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    font: 700 18px 'Poppins', sans-serif;
+    color: #835afd;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font: 14px 'Roboto', sans-serif;
   }
 `;
