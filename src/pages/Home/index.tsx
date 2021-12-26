@@ -8,7 +8,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { database } from '../../services/firebase';
 
 import { Container, Aside, Main } from './styles';
-import { Button } from './../../components/Button/index';
+import { Button } from '../../components/Button/';
 import logoLetMeAsk from '../../assets/images/logo.svg';
 import googleIcon from '../../assets/images/google-icon.svg';
 import illustrationImg from '../../assets/images/illustration.svg';

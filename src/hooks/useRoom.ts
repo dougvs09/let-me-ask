@@ -9,6 +9,7 @@ type QuestionTypes = {
     avatar: string;
   };
   content: string;
+  response: string | undefined;
   isHighlighted: boolean;
   isAnswered: boolean;
   likeCount: number;
@@ -23,6 +24,7 @@ type FirebaseQuestions = Record<
       avatar: string;
     };
     content: string;
+    response: string;
     isHighlighted: boolean;
     isAnswered: boolean;
     likes: Record<
@@ -47,19 +49,19 @@ export const useRoom = (roomId: string) => {
       const firebaseQuestions: FirebaseQuestions = databaseRoom.questions ?? {};
 
       const parsedQuestion = Object.entries(firebaseQuestions).map(
-        ([key, value]) => {
-          return {
-            id: key,
-            content: value.content,
-            author: value.author,
-            isHighlighted: value.isHighlighted,
-            isAnswered: value.isAnswered,
-            likeCount: Object.values(value.likes ?? {}).length,
-            likeId: Object.entries(value.likes ?? {}).find(
-              ([key, value]) => value.authorId === user?.id
-            )?.[0],
-          };
-        }
+        ([key, value]) => ({
+          id: key,
+          content: value.content,
+          author: value.author,
+          isHighlighted: value.isHighlighted,
+          isAnswered: value.isAnswered,
+          likeCount: Object.values(value.likes ?? {}).length,
+          likeId: Object.entries(value.likes ?? {}).find(
+            // eslint-disable-next-line no-unused-vars
+            ([id, like]) => like.authorId === user?.id
+          )?.[0],
+          response: value.response,
+        })
       );
 
       setTitle(databaseRoom.title);
