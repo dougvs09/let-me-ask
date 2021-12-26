@@ -172,4 +172,10 @@ export const LikeButton = styled.button`
       stroke: #845afd;
     }
   }
+
+  &:hover {
+    svg path {
+      stroke: #845afd;
+    }
+  }
 `;

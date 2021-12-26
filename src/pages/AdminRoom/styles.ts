@@ -126,12 +126,6 @@ export const AdminControlls = styled.div`
       svg path {
         stroke: #835afd;
       }
-
-      &:hover {
-        svg path {
-          stroke: #835afd;
-        }
-      }
     }
 
     &.isHighlighted {
@@ -142,12 +136,10 @@ export const AdminControlls = styled.div`
       svg path {
         stroke: #835afd;
       }
+    }
 
+    &.isAnsweredHover {
       &:hover {
-        svg circle {
-          stroke: #835afd;
-        }
-
         svg path {
           stroke: #835afd;
         }
@@ -158,6 +150,18 @@ export const AdminControlls = styled.div`
       &:hover {
         svg path {
           stroke: #e73f5d;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      &:hover {
+        svg path {
+          stroke: #835afd;
+        }
+
+        svg circle {
+          stroke: #835afd;
         }
       }
     }

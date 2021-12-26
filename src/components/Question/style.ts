@@ -22,7 +22,7 @@ export const QuestionItem = styled.li<Props>`
   border: ${(props) =>
     props.isHighlighted && !props.isAnswered ? '2px solid #835AFD' : ''};
 
-  div {
+  > div {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;

@@ -21,11 +21,11 @@ import {
 import { RoomCode } from '../../components/RoomCode';
 import { Button } from '../../components/Button';
 import { Question } from '../../components/Question';
+import { Modal } from '../../components/Modal';
 
 import logoLetMeAsk from '../../assets/images/logo.svg';
 import emptyIcon from '../../assets/images/empty-questions.svg';
 import dangerImg from '../../assets/images/danger.svg';
-import { Modal } from '../../components/Modal';
 
 type ParamsProps = {
   id: string;
@@ -43,14 +43,6 @@ export const AdminRoom = () => {
   const handleDeleteQuestion = async (questionId: string) => {
     await database.ref(`/rooms/${roomId}/questions/${questionId}`).remove();
     toast.success('Question deleted');
-  };
-
-  const openModal = () => {
-    setModal(true);
-  };
-
-  const closeModal = () => {
-    setModal(false);
   };
 
   const handleEndRoom = async () => {
@@ -82,7 +74,7 @@ export const AdminRoom = () => {
           </Logo>
           <RoomControlls>
             <RoomCode code={roomId!} />
-            <Button onClick={openModal}>Encerrar sala</Button>
+            <Button onClick={() => setModal(true)}>Encerrar sala</Button>
           </RoomControlls>
         </HeaderContainer>
       </Header>
@@ -106,7 +98,11 @@ export const AdminRoom = () => {
                     {!question.isAnswered && (
                       <>
                         <button
-                          className={question.isAnswered ? 'isAnswered' : ''}
+                          className={
+                            question.isAnswered
+                              ? 'isAnswered'
+                              : 'isAnsweredHover'
+                          }
                           onClick={() => handleAnswerQuestion(question.id)}
                         >
                           <svg
@@ -204,7 +200,7 @@ export const AdminRoom = () => {
             <h2>Encerrar sala</h2>
             <p>Tem certeza que deseja encerrar esta sala?</p>
             <div>
-              <Button onClick={closeModal}>Cancelar</Button>
+              <Button onClick={() => setModal(false)}>Cancelar</Button>
               <Button onClick={handleEndRoom}>Sim, encerrar</Button>
             </div>
           </ModalConfirm>
