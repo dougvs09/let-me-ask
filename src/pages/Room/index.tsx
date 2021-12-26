@@ -17,6 +17,7 @@ import {
   UserInfo,
   QuestionsList,
   LikeButton,
+  Redirect,
 } from './styles';
 import { RoomCode } from '../../components/RoomCode/index';
 import { Button } from '../../components/Button';
@@ -35,7 +36,7 @@ export const Room = () => {
   const roomId = params.id;
   const [newQuestion, setNewQuestion] = useState('');
 
-  const { questions, title } = useRoom(roomId!);
+  const { questions, title } = useRoom(roomId);
   const { user } = useAuth();
 
   const handleNewQuestion = async (event: FormEvent) => {
@@ -112,7 +113,8 @@ export const Room = () => {
               </UserInfo>
             ) : (
               <span>
-                Para enviar sua pergunta, <button>faça seu login</button>
+                Para enviar sua pergunta,{' '}
+                <Redirect to="/">faça seu login</Redirect>
               </span>
             )}
             <Button disabled={!user}>Enviar pergunta</Button>
