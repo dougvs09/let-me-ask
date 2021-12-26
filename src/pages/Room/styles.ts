@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Header = styled.header`
   width: 100%;
@@ -107,23 +108,23 @@ export const FormFooter = styled.div`
   span {
     font: 14px 'Roboto', sans-serif;
     color: #737380;
-
-    button {
-      color: #835afd;
-      border: none;
-      background: none;
-
-      text-decoration: underline;
-      font: 14px 'Roboto', sans-serif;
-
-      cursor: pointer;
-    }
   }
 
   > button {
     width: auto;
     margin-top: 0;
   }
+`;
+
+export const Redirect = styled(Link)`
+  color: #835afd;
+  border: none;
+  background: none;
+
+  text-decoration: underline;
+  font: 14px 'Roboto', sans-serif;
+
+  cursor: pointer;
 `;
 
 export const UserInfo = styled.span`

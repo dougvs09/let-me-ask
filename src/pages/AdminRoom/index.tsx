@@ -100,10 +100,7 @@ export const AdminRoom = () => {
       </Header>
       <Main>
         <Title>
-          <h2>
-            Sala
-            {title}
-          </h2>
+          <h2>Sala {title}</h2>
           {questions.length > 0 && <span>{questions.length} perguntas</span>}
         </Title>
         {questions.length > 0 ? (
