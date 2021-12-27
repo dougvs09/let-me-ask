@@ -56,4 +56,4 @@
 <br>
 <h2 style="color: #835afd" id="features">Features ✨</h2>
 <h3 style="color: #835afd">Resposta 💬</h3>
-<p>Agora o dono da sala poderá enviar respostas às perguntas que estão na sua sala. Antes, não tinha a opção de responder pelo app, apenas oralmente, por exemplo se o dono da sala estivesse fazendo uma live e seus seguidores faziam as perguntas pelo app e ele respondia pela live. Porém agora, as respostas podem ser dadas no app mesmo, apenas clicando no ícone de "chat" que fica no canto iferior direito de cada pergunta</p>
+<p>Agora o dono da sala poderá enviar respostas às perguntas que estão na sua sala. Antes, não tinha a opção de responder pelo app, apenas oralmente, por exemplo se o dono da sala estivesse fazendo uma live e seus seguidores faziam as perguntas pelo app e ele respondia pela live. Porém agora, as respostas podem ser dadas no app mesmo, apenas clicando no ícone de "chat" que fica no canto inferior direito de cada pergunta</p>
