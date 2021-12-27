@@ -58,7 +58,6 @@ export const useRoom = (roomId: string | undefined) => {
           isAnswered: value.isAnswered,
           likeCount: Object.values(value.likes ?? {}).length,
           likeId: Object.entries(value.likes ?? {}).find(
-            // eslint-disable-next-line no-unused-vars
             ([id, like]) => like.authorId === user?.id
           )?.[0],
           response: value.response,
