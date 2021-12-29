@@ -4,6 +4,7 @@
   <a href="#sobre">Sobre</a> 🔗
   <a href="#tecnologias">Tecnologias</a> 🔗
   <a href="#como_funciona">Como funciona</a> 🔗
+  <a href="#features">Features</a> 🔗
 </p>
 
 <h2 id="sobre" style="color: #835afd">Sobre 💡</h2>
@@ -52,3 +53,7 @@
 <br>
 <h3 style="color: #835afd">Então é isso! Esta aplicação foi feita com muito carinho e também adquiri muuuitos aprendizados fazendo ela, junto ao Diego Fernandes, da Rocketseat.</h3>
 <h3 style="color: #835afd">Pretendo colocar outras funcionalidades nessa aplicação, estou com algumas ideias na cabeça, acho que nos próximos dias sai alguma funcionalidade nova!</h3>
+<br>
+<h2 style="color: #835afd" id="features">Features ✨</h2>
+<h3 style="color: #835afd">Resposta 💬</h3>
+<p>Agora o dono da sala poderá enviar respostas às perguntas que estão na sua sala. Antes, não tinha a opção de responder pelo app, apenas oralmente, por exemplo se o dono da sala estivesse fazendo uma live e seus seguidores faziam as perguntas pelo app e ele respondia pela live. Porém agora, as respostas podem ser dadas no app mesmo, apenas clicando no ícone de "chat" que fica no canto inferior direito de cada pergunta</p>
