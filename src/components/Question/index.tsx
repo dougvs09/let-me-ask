@@ -12,10 +12,10 @@ type QuestionProps = {
     name: string;
     avatar: string;
   };
+  response: string | undefined;
   children: ReactNode;
   isHighlighted: boolean;
   isAnswered: boolean;
-  response: string | undefined;
 };
 
 export const Question = ({
