@@ -7,6 +7,8 @@
   <a href="#features">Features</a> 🔗
 </p>
 
+<h2>Link para o site: https://let-me-ask-9b8cc.firebaseapp.com/</h2>
+
 <h2 id="sobre" style="color: #835afd">Sobre 💡</h2>
 <p>Este projeto foi desenvolvido na Next Level Week (NLW) da Rocketseat. Esse evento tem várias trilhas, por exemplo: trilha React, ReactNative, NodeJs, entre outras. Eu escolhi a trilha React, pois é o que estou estudano atualmente!</p>
 <br>
